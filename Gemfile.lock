@@ -191,6 +191,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  builder (>= 2.1.2)
   capybara
   chronic
   compass (>= 0.10.6)

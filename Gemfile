@@ -46,6 +46,7 @@ gem 'devise'
 # and rake tasks are available in development mode:
 group :development, :test do
   gem "rspec-rails", ">= 2.2.0"
+  gem 'builder', ">= 2.1.2"
 end
 
 group :test do
