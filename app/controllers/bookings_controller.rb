@@ -3,9 +3,6 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
-  def show
-  end
-
   def list
     @schedule_date = Date.parse(params[:id])
     @am_bookings = Booking.find_bookings_on(@schedule_date, :am)
@@ -14,7 +11,6 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @payment_methods = ["Cash", 'Cheque', 'Sipple', 'DPJ', 'CISC', 'Fond Social', 'Autre']
   end
 
   def create
@@ -26,7 +22,10 @@ class BookingsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path
   end
 
 end
