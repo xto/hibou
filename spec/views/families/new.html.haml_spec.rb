@@ -13,8 +13,12 @@ describe "families/new.html.haml" do
 
     # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
     assert_select "form", :action => families_path, :method => "post" do
-      assert_select "input#family_name", :name => "family[name]"
-      assert_select "input#family_sin", :name => "family[sin]"
+      assert_select "input#family_fathers_first_name", :name => "family[fathers_first_name]"
+      assert_select "input#family_fathers_last_name", :name => "family[fathers_last_name]"
+      assert_select "input#family_mothers_first_name", :name => "family[mothers_first_name]"
+      assert_select "input#family_mothers_last_name", :name => "family[mothers_last_name]"
+      assert_select "input#family_email", :name => "family[email]"
+      assert_select "input#family_wants_info_by_mail", :name => "family[wants_info_by_mail]"
     end
   end
 end

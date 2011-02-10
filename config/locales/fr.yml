@@ -347,10 +347,10 @@ fr:
         <<: *errors_template
       full_messages:
         format: "%{attribute} %{message}"
+####################
+# Fakers i18n info
+####################
 
-######################
-# FAKERS i18n
-####
   faker:
     address:
       city_prefix: [North, East, West, South, New, Lake, Port]

@@ -1,8 +1,12 @@
 = semantic_form_for @family do |form|
   =form.semantic_errors
   =form.inputs do
-    =form.input :name
-    =form.input :sin
+    =form.input :fathers_first_name
+    =form.input :fathers_last_name
+    =form.input :mothers_first_name
+    =form.input :mothers_last_name
+    =form.input :email
+    =form.input :wants_info_by_mail
 
   = form.inputs :civic_number, :apartment, :street, :city, :province, :postal_code, :for => :address, :name => Family.human_attribute_name(:address)
 
