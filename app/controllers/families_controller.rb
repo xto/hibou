@@ -26,6 +26,7 @@ class FamiliesController < ApplicationController
   def new
     @family = Family.new
     @family.build_address
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @family }

@@ -1,16 +1,36 @@
 require 'machinist/active_record'
+include FamiliesHelper
 
-User.blueprint do
-  email { Faker::Internet.email }
-  password { "password" }
-  password_confirmation { "password" }
-end
+  User.blueprint do
+    email { Faker::Internet.email }
+    password { "password" }
+    password_confirmation { "password" }
+  end
+
+  Address.blueprint do
+    civic_number { (1..100).to_a.rand }
+    street       { Faker::Address.street_name}
+    apartment    { (1..100).to_a.rand }
+    city         { Faker::Address.city }
+    province     { Faker::Address.state}
+    postal_code  { Faker::Address.postcode}
+  end
 
  Child.blueprint do
    first_name { Faker::Name.first_name }
    last_name  { Faker::Name.last_name }
    birth_date { Date.today.years_ago(1) }
  end
+
+  Family.blueprint do
+    fathers_first_name { Faker::Name.first_name }
+    fathers_last_name  { Faker::Name.last_name }
+    mothers_first_name { Faker::Name.first_name }
+    mothers_last_name  { Faker::Name.last_name }
+    email              { Faker::Internet.email }
+    address            { Address.make!}
+    household_income   { text_income_brackets.rand[0]}
+  end
 
 Booking.blueprint do
   child { Child.make }
