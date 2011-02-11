@@ -1,12 +1,47 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @family.name
-%p
-  %b Sin:
-  = @family.sin
-
-= link_to 'Edit', edit_family_path(@family)
-\|
-= link_to 'Back', families_path
+#main
+  .block
+    .secondary-navigation
+      %ul
+        %li= link_to t('list'), families_path
+        %li= link_to t('new'), new_family_path
+        %li.active= link_to t('edit'), edit_family_path(@family)
+    .content
+      %h2
+        = t('family.view')
+      .inner
+        %ul[@family]
+          %li#fathers_first_name
+            %b
+              = Family.human_attribute_name(:fathers_first_name)
+              \:
+            = @family.fathers_first_name
+          %li#fathers_last_name
+            %b
+              = Family.human_attribute_name(:fathers_last_name)
+              \:
+            = @family.fathers_last_name
+          %li#mothers_first_name
+            %b
+              = Family.human_attribute_name(:mothers_first_name)
+              \:
+            = @family.mothers_first_name
+          %li#mothers_last_name
+            %b
+              = Family.human_attribute_name(:mothers_last_name)
+              \:
+            = @family.mothers_last_name
+          %li#email
+            %b
+              = Family.human_attribute_name(:email)
+              \:
+            = @family.email
+          %li#fathers_first_name
+            %b
+              = Family.human_attribute_name(:fathers_first_name)
+              \:
+            = @family.fathers_first_name
+          %li#address
+            %b
+              = Family.human_attribute_name(:address)
+              \:
+            = @family.address

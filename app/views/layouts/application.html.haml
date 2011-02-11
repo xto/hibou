@@ -23,6 +23,8 @@
           %ul
             %li{ :id => 'bookings', :class => active?(:bookings) }
               = link_to t('menu.bookings'), todays_schedule_path
+            %li{ :id => 'families', :class => active?(:families) }
+              = link_to t('menu.families'), families_path
             %li{ :id => 'children', :class => active?(:children) }
               = link_to t('menu.children'), children_path
 

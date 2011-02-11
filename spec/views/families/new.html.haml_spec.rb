@@ -18,7 +18,7 @@ describe "families/new.html.haml" do
       assert_select "input#family_mothers_first_name", :name => "family[mothers_first_name]"
       assert_select "input#family_mothers_last_name", :name => "family[mothers_last_name]"
       assert_select "input#family_email", :name => "family[email]"
-      assert_select "input#family_wants_info_by_mail", :name => "family[wants_info_by_mail]"
+      assert_select "input#family_wants_info_by_email", :name => "family[wants_info_by_email]"
     end
   end
 end

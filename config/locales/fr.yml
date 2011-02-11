@@ -28,6 +28,7 @@ fr:
     children: Enfants
     bookings: Réservations
 
+    families: "Familles"
   account:
     logout: Déconnexion
     profile: Éditer votre compte
@@ -37,6 +38,12 @@ fr:
     new: Enregistrer un enfant
     view: Voir le dossier d'un enfant
     edit: Modifier le dossier d'un enfant
+
+  family:
+    list: Liste des familles
+    new: Enregistrer une famille
+    view: Voir le dossier d'une famille
+    edit: Modifier le dossier d'une famille
 
   booking:
     schedule: Horaire du %{date}
@@ -84,6 +91,9 @@ fr:
       user:
         create: Se connecter
         update: Confirmer
+      family:
+        create: Enregistrer
+        update: Modifier
 
 #######  #Application text
   back: Retour
@@ -314,8 +324,12 @@ fr:
       address: Adresse
     attributes:
       family:
-        name: Nom
-        sin: Numéro d'assurance sociale
+        fathers_first_name: Prénom du père
+        fathers_last_name: Nom du père
+        mothers_first_name: Prénom de la mère
+        mothers_last_name: Nom de la mère
+        email: Adresse Courriel
+        wants_info_by_email: Veut recevoir des informations par courriel
         address: Adresse
       address:
         civic_number: Numéro civique

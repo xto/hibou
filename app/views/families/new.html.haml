@@ -1,5 +1,11 @@
-%h1 New family
-
-= render 'form'
-
-= link_to 'Back', families_path
+#main
+  .block
+    .secondary-navigation
+      %ul
+        %li(id='list_families')= link_to t('list'), families_path
+        %li(id='add_family' class='active')= link_to t('new'), new_family_path
+    .content
+      %h2
+        = t('family.new')
+      .inner
+        = render 'form'

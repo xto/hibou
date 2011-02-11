@@ -6,8 +6,12 @@
     =form.input :mothers_first_name
     =form.input :mothers_last_name
     =form.input :email
-    =form.input :wants_info_by_mail
+    =form.input :wants_info_by_email
 
   = form.inputs :civic_number, :apartment, :street, :city, :province, :postal_code, :for => :address, :name => Family.human_attribute_name(:address)
 
-  = form.buttons
+  = form.buttons do
+    = form.commit_button
+    %li.cancel
+      = t(:or)
+      = link_to t(:cancel), children_path
