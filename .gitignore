@@ -8,3 +8,4 @@ db/schema.rb
 public/stylesheets/.sass-cache/
 tmp/*
 .cache_rake_t
+public/stylesheets/compiled/*
