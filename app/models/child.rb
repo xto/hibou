@@ -1,8 +1,8 @@
 class Child < ActiveRecord::Base
-  validates_presence_of :first_name, :last_name, :birth_date
-  
+  validates_presence_of :first_name, :last_name, :birth_date, :family
   has_many :bookings
-
+  belongs_to :family
+  
   def allergic?
     not allergies.blank?
   end

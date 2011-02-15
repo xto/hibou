@@ -1,3 +1,4 @@
+include FamiliesHelper
 Given /^these children are registered$/ do |children|
   children.hashes.each do |child|
     child['birth date'] ||= Date.today.to_s(:db)
@@ -6,6 +7,21 @@ Given /^these children are registered$/ do |children|
 end
 
 Given /^a child registered with:$/ do |child|
+  Family.create!(:fathers_first_name => Faker::Name.first_name,
+                   :fathers_last_name  => Faker::Name.last_name,
+                   :mothers_first_name => Faker::Name.first_name,
+                   :mothers_last_name  => Faker::Name.last_name,
+                   :email              => Faker::Internet.email,
+                   :address            => Address.create!(
+                       :civic_number => (1..100).to_a.rand,
+                       :street       => Faker::Address.street_name,
+                       :apartment    => (1..100).to_a.rand,
+                       :city         => Faker::Address.city,
+                       :province     => Faker::Address.state,
+                       :postal_code  => Faker::Address.postcode
+                   ),
+                   :household_income   => text_income_brackets.rand[0])
+
   administer_children
   open_child_registration
   register_child(child.rows_hash)

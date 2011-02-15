@@ -11,6 +11,7 @@ module NewChildFilePage
       fill_in 'child_first_name', :with => child['first name']
       fill_in 'child_last_name', :with => child['last name']
       select_child_birth_date(Date.parse(child['birth date']))
+      select Family.all.first.to_s, :from => 'child_family_id'
       check 'child_bottle' if child['bottle'] == "yes"
       check 'child_snack' if child['snack'] == "yes"
       check 'child_nap' if child['nap'] == "yes"

@@ -14,4 +14,8 @@ class Family < ActiveRecord::Base
   validates_inclusion_of :household_income, :in => INCOME_BRACKETS
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
 
+  def to_s
+    "#{fathers_first_name} #{fathers_last_name} #{I18n.t(:and)} #{mothers_first_name} #{mothers_last_name}"
+  end
+
 end
