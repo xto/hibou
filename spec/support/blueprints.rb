@@ -30,7 +30,10 @@ include FamiliesHelper
     mothers_last_name  { Faker::Name.last_name }
     email              { Faker::Internet.email }
     address            { Address.make!}
-    household_income   { text_income_brackets.rand[0]}
+    household_income   { humanize_income_brackets.rand[0] }
+    mothers_age_group  { humanize_mothers_age_groups.rand[0] }
+    family_type        { humanize_family_types.rand[0] }
+    martial_status     { humanize_martial_statuses.rand[0] }
   end
 
 Booking.blueprint do

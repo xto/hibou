@@ -107,6 +107,20 @@ fr:
   between_35000_and_39999: "entre 35 000$ et 39 999$"
   greater_or_equal_to_40000: "40 000$ et plus"
 
+  less_than_21: "moins de 21 ans"
+  between_21_and_30: "entre 21 ans et 30 ans"
+  greater_or_equal_to_31: "31 ans et plus"
+
+  married: "Marié"
+  common_law_union: "Conjoint de fait"
+  single: "Célibataire"
+
+  biparental: "Biparentale"
+  monoparental: "Monoparentale"
+  reconstituted: "Reconstituée"
+  foster_family: "Accueil/Substitut"
+
+
 #######  #Application text
   back: Retour
   save: Sauvegarder

@@ -5,8 +5,11 @@
     =form.input :fathers_last_name
     =form.input :mothers_first_name
     =form.input :mothers_last_name
+    =form.input :mothers_age_group, :as => :select, :collection => humanize_mothers_age_groups, :default => humanize_mothers_age_groups[0] 
     =form.input :email
-    =form.input :household_income, :as => :select, :collection => text_income_brackets, :default => text_income_brackets[0]
+    =form.input :household_income, :as => :select, :collection => humanize_income_brackets, :default => humanize_income_brackets[0]
+    =form.input :family_type, :as => :select, :collection => humanize_family_types, :default => humanize_family_types[0]
+    =form.input :martial_status, :as => :select, :collection => humanize_martial_statuses, :default => humanize_martial_statuses[0]
     =form.input :wants_info_by_email
 
 

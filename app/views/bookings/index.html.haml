@@ -23,7 +23,7 @@
               %td= booking.date
               %td= booking.period
               -# todo use Child.full_name
-              %td= "#{booking.child.first_name} #{booking.child.last_name}"
+              %td= booking.child.full_name
               %td
                 %ul
                   %li= link_to t(:cancel), booking, :class => "delete", :confirm => t(:are_you_sure), :method => :delete
