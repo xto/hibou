@@ -357,6 +357,9 @@ fr:
         email: Adresse Courriel
         wants_info_by_email: Veut recevoir des informations par courriel
         address: Adresse
+        household_income: Revenu familial
+        family_type: Type de famille
+        martial_status: État civil
       address:
         civic_number: Numéro civique
         apartment: Apartement
