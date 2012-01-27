@@ -28,6 +28,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 group :development do
   gem 'ruby_parser'
   gem 'hpricot'
+  gem 'heroku'
 end
 
 # gem 'bj'
